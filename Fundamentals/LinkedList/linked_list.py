@@ -38,6 +38,25 @@ class LinkedList:
         current.next = node
         self._size += 1
     
+    def insertAtPosition(self, pos, val):
+        #O(n) time
+        #O(1) space
+        #H->1->2->3 pos = 2 val = 4
+        #H->1->4->2->3
+        current = self.head
+        currentPos = 0
+        while(current):
+            currentPos += 1
+            if(currentPos) == pos:
+                newNodesNext = current.next
+                newNode = Node(val)
+                current.next = newNode
+                newNode.next = newNodesNext
+                self._size += 1
+                return
+            current = current.next
+        return
+            
     def removeBeginning(self):
         #O(1) time
         #O(1) space
@@ -57,6 +76,11 @@ if __name__ == '__main__':
     linkedList.removeBeginning()
     linkedList.removeBeginning()
     print(linkedList) #3|2|1| #invokes __str__ method
+    linkedList.insertAtPosition(2, 4)
+    print(linkedList) #3|4|2|1
+    linkedList.insertAtPosition(5, 5)
+    print(linkedList) #3|4|2|1|5
     for i in range(6, 11):
-        linkedList.insertLast(i) #3|2|1|6|7|8|9|10|
+        linkedList.insertLast(i) #3|4|2|1|5|6|7|8|9|10|
+    
     print(linkedList) #invokes __str__ method
