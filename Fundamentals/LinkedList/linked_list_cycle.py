@@ -1,3 +1,5 @@
+
+# https://leetcode.com/problems/linked-list-cycle/
 class Node:
     def __init__(self, value, next=None):
         self.value = value
