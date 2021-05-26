@@ -52,11 +52,11 @@ if __name__ == '__main__':
     linkedList = LinkedList()
     for i in range(1, 6):
         linkedList.insertFront(i)
-    print(linkedList) #5|4|3|2|1|
+    print(linkedList) #5|4|3|2|1| #invokes __str__ method
     print(linkedList.head.next.value)
     linkedList.removeBeginning()
     linkedList.removeBeginning()
-    print(linkedList) #3|2|1|
+    print(linkedList) #3|2|1| #invokes __str__ method
     for i in range(6, 11):
         linkedList.insertLast(i) #3|2|1|6|7|8|9|10|
-    print(linkedList)
+    print(linkedList) #invokes __str__ method
