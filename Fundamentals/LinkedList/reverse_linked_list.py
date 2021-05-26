@@ -1,3 +1,6 @@
+#1->2->3
+#3->2->1
+
 class Node:
     def __init__(self, value, next=None):
         self.value = value
@@ -13,6 +16,10 @@ class Node:
         return result
 
 def reverseLinkedList(head):
+    
+    #base case - None - No nodes
+    #base case - #1 - Only one node
+    
     current = head
     prev = None
 
@@ -32,5 +39,15 @@ print(head.next) #0|1|2|3|4|5|6|7|8|9|
 head.next = reverseLinkedList(head.next)
 print(head.next) #9|8|7|6|5|4|3|2|1|0|
 
-#O(n) - linear time complexity - go through all the nodes exactly once and reverses the pointers
+head = Node(1)
+head.next = None
+print(head)
+head = reverseLinkedList(head)
+print(head)
+
+head = None
+print(head)
+head = reverseLinkedList(head)
+print(head)
+#O(n) - linear time complexity - go through all the nodes exactly once and reverse the pointers
 #O(1) - constant space complexity
