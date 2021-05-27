@@ -29,6 +29,9 @@ def deleteNode(node):
 
     return True
 
+#Given the node, we are just copying the next node's details to the given node and deleting the next node
+#O(1) - Both time and space
+
 if __name__ == '__main__':
     
     head = Node('Head')
