@@ -92,4 +92,13 @@ def findKthToLast(head, k):
 
 #O(N) - Time complexity -O(K+N-K) - O(N) - where N be the length of the linked list
 #(1) - Constant space complexity
-    
+
+if __name__ == '__main__':
+    linkedList = LinkedList()
+    for i in range(1, 6):
+        linkedList.insertFront(i)
+    print(linkedList) #5|4|3|2|1| #invokes __str__ method
+    print(findKthToLast(linkedList.head.next, 4).value) #4
+    print(findKthToLast(linkedList.head.next, 1).value) #1
+    print(findKthToLast(linkedList.head.next, 10)) #None
+    print(linkedList) #4|5|4|1|3|2|1|
