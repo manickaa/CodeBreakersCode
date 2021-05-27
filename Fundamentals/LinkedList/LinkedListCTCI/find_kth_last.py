@@ -101,4 +101,3 @@ if __name__ == '__main__':
     print(findKthToLast(linkedList.head.next, 4).value) #4
     print(findKthToLast(linkedList.head.next, 1).value) #1
     print(findKthToLast(linkedList.head.next, 10)) #None
-    print(linkedList) #4|5|4|1|3|2|1|
