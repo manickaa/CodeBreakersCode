@@ -1,3 +1,8 @@
+#Inputs: #digits are stored in reverse order
+#   7->1->6 + 
+#   5->9->2    (617+295)
+#Output:
+#   2->1->9    (912)
 class Node:
     def __init__(self, value, next=None):
         self.value = value
