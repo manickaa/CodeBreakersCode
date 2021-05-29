@@ -17,6 +17,7 @@
 def isValidParanthesis(string):
     
     #O(N) time and space
+    #in worst case, s = '(((((((((......', everything gets added to the stack - so O(N)
 
     stack = []
     
