@@ -8,6 +8,10 @@ class Node:
 
 class LRUCache:
     
+    '''
+    Time complexity for put() and get() - Constant time O(1)
+    Space complexity: O(capacity) - which is the maximum size of the cache
+    '''
     def __init__(self, capacity) -> None:
         self.head = Node('head', 'head')
         self.tail = Node('tail', 'tail')
