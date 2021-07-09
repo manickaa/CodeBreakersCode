@@ -7,10 +7,12 @@ def isPalindrome(s: str) -> bool:
     p2 = len(s)-1
     
     while p1 < p2:
+        #remove non alpha numeric characters
         while p1 < p2 and not s[p1].isalnum():
             p1 += 1
         while p1 < p2 and not s[p2].isalnum():
             p2 -=1
+        #if characters at pointers does not match
         if s[p1].lower() != s[p2].lower():
             return False
         p1 += 1
@@ -23,9 +25,9 @@ if __name__ == '__main__':
     print(isPalindrome(s))  #True
     s = 'a man a plan, a canal: panama'
     print(isPalindrome(s))  #True
-    s = 'race a care'
+    s = 'race a car'
     print(isPalindrome(s))  #False
-    s = 'abccba'
+    s = 'abcccba'
     print(isPalindrome(s))  #True
     s = 'AbCcBa'
     print(isPalindrome(s))  #True
