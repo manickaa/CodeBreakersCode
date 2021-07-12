@@ -1,3 +1,7 @@
+#Worst case complexity = O(N*M) if the hash function is poor
+
+#In the method below - Time complexity - worst case - O(N+M)
+#                       Space complexity - O(1) - No extra memory
 
 prime = 101
 
