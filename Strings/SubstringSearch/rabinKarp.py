@@ -44,3 +44,5 @@ if __name__ == '__main__':
     text = "abdcsabc"
     pattern = "abc"
     print(rabinKarp(text, pattern))
+    print(rabinKarp('Aishwarya', 'arya'))
+    print(rabinKarp('Aishwarya', 'isha'))
