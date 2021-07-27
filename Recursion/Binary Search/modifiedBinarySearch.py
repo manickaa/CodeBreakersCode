@@ -33,6 +33,34 @@ def modifiedBinarySearch(rotatedArray, target):
             else:
                 lo = mid+1
     return -1
+
+#[2,2,2,2,2,2,2,2,4,2,2,2,2]
+def binarySearchWithDuplicates(array, target):
+    lo = 0                  #0  #6
+    hi = len(array) -1      #12 #12
+    while lo <= hi:
+        mid = (hi+lo) //2   #6  #9   
+
+        if array[mid] == target:
+            return mid
+
+        while(lo != mid and array[lo] == array[mid]):
+            lo += 1
+        
+        if array[lo] > array[mid]:
+            if target >= array[lo] or target <= array[mid]:
+                hi = mid - 1
+            else:
+                lo = mid + 1
+        else:
+            if array[lo] <= target < array[mid]:
+                hi = mid - 1
+            else:
+                lo = mid + 1
+
+
 if __name__ == '__main__':
     array = [4,5,6,8,0,1,2]
     print(modifiedBinarySearch(array, 0)) #should return 4
+    dup_array = [2,2,2,2,2,2,2,2,4,2,2,2,2]
+    print(binarySearchWithDuplicates(dup_array, 4))
